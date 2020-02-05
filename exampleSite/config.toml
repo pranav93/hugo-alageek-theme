@@ -7,6 +7,7 @@ theme = "alageek"
 title = "alaGeek Theme"
 
 [params]
+GA_MEASUREMENT_ID = "some-id"
 copyright = "© 2018 by Gökmen Görgen"
 copyrightUrl = "https://gokmengorgen.net"
 description = "Hugo alaGeek Theme"
