@@ -1,6 +1,19 @@
 {{ $isTocEnabled := .Scratch.Get "isTocEnabled" }}
 
 <div class="my-4 my-md-5 header">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GA_MEASUREMENT_ID }}"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', "{{ .Site.Params.GA_MEASUREMENT_ID }}");
+    ga('create', "{{ .Site.Params.GA_MEASUREMENT_ID }}", 'auto');
+    ga('send', 'pageview');
+
+    </script>
+
     <div class="container">
         <div class="row">
             <div class="col-auto{{ if not $isTocEnabled }} offset-md-1{{ end }} d-none d-md-block">
